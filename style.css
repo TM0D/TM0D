@@ -5,3 +5,18 @@ body {
 p, .test {
     color: white;
 }
+
+.intro {
+  font-family: "Courier New";
+  text-align: center;
+  font-size: 24px;
+  animation-name: introAnim;
+  animation-duration: 3s;
+  animation-direction: reverse;
+}
+
+@keyframes introAnim {
+  0% {font-size: 24px;}
+  65% {font-size: 72px;}
+  100% {font-size: 72px;}
+}
