@@ -1,5 +1,3 @@
-// Thanks otto
-
 let header = document.querySelector('#intro');
 let anim = [
     { t: "[RJUP]", ms: 100 },
@@ -43,3 +41,5 @@ let update = () => {
     }
 }
 update();
+
+// Thanks otto

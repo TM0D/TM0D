@@ -2,21 +2,24 @@ body {
     background-color: black;
   }
   
-p, .test {
+p {
     color: white;
 }
 
 .intro {
   font-family: "Courier New";
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 200;
+  color: white;
   animation-name: introAnim;
   animation-duration: 3s;
-  animation-direction: reverse;
+  animation-direction: forwards;
+  animation-fill-mode: forwards; /* keeps anim after finished */
 }
 
 @keyframes introAnim {
-  0% {font-size: 24px;}
-  65% {font-size: 72px;}
-  100% {font-size: 72px;}
+  0% {font-size: 92px;}
+  30% {font-size: 92px;}
+  100% {font-size: 28px;}
 }
