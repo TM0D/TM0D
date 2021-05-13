@@ -1,3 +1,7 @@
+.global {
+  display: none;
+}
+
 body {
     background-color: black;
   }
@@ -13,7 +17,7 @@ p {
   font-weight: 200;
   color: white;
   animation-name: introAnim;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-direction: forwards;
   animation-fill-mode: forwards; /* keeps anim after finished */
 }
@@ -23,3 +27,4 @@ p {
   30% {font-size: 92px;}
   100% {font-size: 28px;}
 }
+
