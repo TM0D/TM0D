@@ -52,6 +52,14 @@ p.introText {
 
 div.links {
   padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a.links {
+  cursor: default;
 }
 
 button.links {
@@ -61,6 +69,7 @@ button.links {
   align-content: center;
   border-style: solid;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 p.links {
@@ -107,4 +116,30 @@ button.links.ss {
 button.links.ss:hover {
   background-color: rgba(255, 222, 26, 1);
   color: rgb(20, 23, 26);
+}
+
+
+button.links.bs {
+  background-color: #000000;
+  border-color: #37373a;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  color: white;
+}
+
+button.links.bs:hover {
+  background-color: #37373a;
+  color: white;
+}
+
+
+button.links.tv {
+  background-color: black;
+  border-color: #6441A5;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  color: #8d51fd;
+}
+
+button.links.tv:hover {
+  background-color: #6441A5;
+  color: white;
 }
