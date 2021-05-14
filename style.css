@@ -15,7 +15,6 @@ body {
 
   animation-name: introOpAnim;
   animation-duration: 2s;
-  animation-direction: forwards;
   animation-fill-mode: forwards;
 }
 
@@ -33,7 +32,6 @@ p.introText {
 
   animation-name: introAnim;
   animation-duration: 2s;
-  animation-direction: forwards;
   animation-fill-mode: forwards;  /* keeps anim after finished */
 }
 
@@ -56,6 +54,18 @@ div.links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  opacity: 0.0;
+
+  animation-name: linkOpAnim;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkOpAnim {
+  0% {opacity: 0.0; margin-top: 20px;}
+  60% {opacity: 0.0; margin-top: 20px;}
+  100% {opacity: 1.0; margin-top: 0px;}
 }
 
 a.links {
