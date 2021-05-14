@@ -1,5 +1,9 @@
-let header = document.querySelector('#intro');
+let header = document.querySelector('#introText');
 let anim = [
+    { t: "[]", ms: 200 },
+    { t: "[R]", ms: 75 },
+    { t: "[RJ]", ms: 75 },
+    { t: "[RJP]", ms: 75 },
     { t: "[RJUP]", ms: 75 },
     { t: "[LK2D]", ms: 75 },
     { t: "[SP0N]", ms: 75 },
@@ -37,12 +41,6 @@ let update = () => {
     if (i < anim.length)
         setTimeout(update, step.ms / stepDenominator);
     else {
-        header.classList.add('top');
-        setTimeout(() => {
-            document.getElementById('main').style.opacity = 1;
-            initGlobe();
-        }, 500);
-        window.localStorage.stepDenominator = 2;
     }
 }
 update();
