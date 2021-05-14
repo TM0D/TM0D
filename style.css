@@ -4,10 +4,6 @@ body {
  padding: 0px;
  margin: 0px;
 }
-  
-.introText {
-  color: white;
-}
 
 .introText {
   background-image: url(images/smallbanner20.gif);
@@ -15,6 +11,7 @@ body {
   background-repeat: no-repeat; 
   background-size: cover;
   height: 100%;
+  color: white;
 
   animation-name: introOpAnim;
   animation-duration: 2s;
@@ -24,6 +21,7 @@ body {
 
 p.introText {
   margin-top: 0px; 
+  margin-bottom: 5px; 
   padding: 10px;
   font-family: "Verdana";
   text-align: center;
@@ -31,6 +29,7 @@ p.introText {
   font-weight: 200;
   color: white;
   opacity: 1.0;
+  background-image: linear-gradient(to right, rgba(0,0,0,0) , rgba(0,0,0,0) ,rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0), rgba(0,0,0,0));
 
   animation-name: introAnim;
   animation-duration: 2s;
@@ -48,4 +47,64 @@ p.introText {
   0% {opacity: 0.0;}
   40% {opacity: 0.0;}
   100% {opacity: 1.0;}
+}
+
+
+div.links {
+  padding-left: 5px;
+}
+
+button.links {
+  padding: 10px;
+  width: 110px;
+  margin: 5px;
+  align-content: center;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+p.links {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+p.links.gh {margin-top: 1px;} img.links.gh {padding-top: 3px;}
+button.links.gh {
+  padding-top: 3px;
+  background-color: black;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  color: white;
+}
+
+button.links.gh:hover {
+  background-color: white;
+  color: black;
+}
+
+
+button.links.twt {
+  background-color: rgba(29, 161, 242, 0);
+  border-color: rgb(29, 161, 242);
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  color: rgb(29, 161, 242);
+}
+
+button.links.twt:hover {
+  background-color: rgba(29, 161, 242, 1);
+  color: rgb(20, 23, 26);
+}
+
+
+
+button.links.ss {
+  padding-top: 9px;
+  background-color: rgba(255, 222, 26, 0);
+  border-color: rgb(255, 222, 26);
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  color: rgb(255, 222, 26);
+}
+
+button.links.ss:hover {
+  background-color: rgba(255, 222, 26, 1);
+  color: rgb(20, 23, 26);
 }
