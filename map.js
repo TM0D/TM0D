@@ -14,10 +14,11 @@ SaeraBeatmaps.forEach(bsMapKey => {
 });
 
 function creatBeatmap(bsapi) {
+    // setup div
    let currMapDiv = document.createElement("div");
    currMapDiv.classList.add("beatmaps");
    currMapDiv.classList.add("beatmap");
-
+//image
    let imageDiv = document.createElement("div");
    imageDiv.classList.add("beatmaps");
    imageDiv.classList.add("image");
@@ -30,6 +31,7 @@ function creatBeatmap(bsapi) {
     coverImg.classList.add("beatmaps");
     coverImg.classList.add("cover");
 
+// title    
    let titleDiv = document.createElement("div");
     titleDiv.classList.add("beatmaps");
     titleDiv.classList.add("title");
@@ -40,6 +42,8 @@ function creatBeatmap(bsapi) {
     titleLink.target = "_blank";
     titleLink.classList.add("beatmaps");
     titleLink.classList.add("title");
+
+    //buttons
 
     //console.log(bsapi);
     //console.log(bsapi.name);
