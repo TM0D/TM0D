@@ -31,6 +31,23 @@ function creatBeatmap(bsapi) {
     coverImg.classList.add("beatmaps");
     coverImg.classList.add("cover");
 
+   let votebar = document.createElement("div");
+   let votebarPercent = document.createElement("div");
+    votebar.style.backgroundColor = "#D33";
+    votebarPercent.style.backgroundColor = "#393";
+
+    let wowicantbeliveihavetodothis = bsapi.stats.score*100+ "%";
+    votebarPercent.style.width = wowicantbeliveihavetodothis;
+    votebarPercent.style.height = "16px";
+
+    votebarPercent.style.fontSize = "14px"; votebar.style.color = "#fff"; votebar.style.textAlign = "center";
+    votebarPercent.innerHTML = bsapi.stats.upvotes + " / " + bsapi.stats.downvotes;
+
+    currMapDiv.appendChild(imageDiv);
+    imageDiv.appendChild(coverImg);
+    imageDiv.appendChild(votebar);
+    votebar.appendChild(votebarPercent);
+
 // title    
    let titleDiv = document.createElement("div");
     titleDiv.classList.add("beatmaps");
@@ -43,20 +60,62 @@ function creatBeatmap(bsapi) {
     titleLink.classList.add("beatmaps");
     titleLink.classList.add("title");
 
+   let titleInfo = document.createElement("p");   
+    titleInfo.innerHTML = "!bsr "+bsapi.id+"<br>BPM: "+bsapi.metadata.bpm+"<br>Duration: "+Math.floor(bsapi.metadata.duration/60)+":"+Math.floor(bsapi.metadata.duration%60);
+    titleInfo.classList.add("beatmaps");
+    titleInfo.classList.add("title");
+
+    currMapDiv.appendChild(titleDiv);
+    titleDiv.appendChild(titleLink);
+    titleDiv.appendChild(titleInfo);
+
     //buttons
+    let buttonDiv = document.createElement("div");
+    buttonDiv.classList.add("beatmaps");
+    buttonDiv.classList.add("buttons");
+
+    let downloadButton = creatButton(bsapi.versions[0].downloadURL, "images/beatmapIcons/downloadFile.png", "Download");
+
+    let oneclickButton = creatButton("beatsaver://"+bsapi.id, "images/beatmapIcons/downloadcloud.png", "OneClick", 17, 17);
+
+    currMapDiv.appendChild(buttonDiv);
+    buttonDiv.appendChild(downloadButton);
+    buttonDiv.appendChild(oneclickButton);
+
+
 
     //console.log(bsapi);
     //console.log(bsapi.name);
     //console.log(bsapi.versions);
-
-   currMapDiv.appendChild(imageDiv);
-    imageDiv.appendChild(coverImg);
-
-   currMapDiv.appendChild(titleDiv);
-    titleDiv.appendChild(titleLink);
 
     let test = document.getElementById("beatmaps-container");
     let placeholder = document.getElementById("TEMP_PLACEHOLDER");
     test.insertBefore(currMapDiv, placeholder);
 }
 
+function creatButton(url, image, alt = "", width = "16", height = "16") {
+
+    let buttonA = document.createElement("a");
+    buttonA.href = url;
+    buttonA.classList.add("beatmaps");
+    buttonA.classList.add("buttons");
+
+    let downloadButton = document.createElement("button");
+    downloadButton.classList.add("beatmaps");
+    downloadButton.classList.add("buttons");
+    downloadButton.classList.add(alt.toLowerCase());
+
+    let downloadButtonIcon = document.createElement("img");
+    downloadButtonIcon.src = image;
+    downloadButtonIcon.alt = alt;
+    downloadButtonIcon.width = width;
+    downloadButtonIcon.height = height;
+    downloadButtonIcon.classList.add("beatmaps");
+    downloadButtonIcon.classList.add("buttons");
+    downloadButtonIcon.classList.add(alt.toLowerCase());
+
+    buttonA.appendChild(downloadButton);
+    downloadButton.appendChild(downloadButtonIcon);
+
+    return buttonA;
+}

@@ -35,6 +35,7 @@ p.introText {
   animation-fill-mode: forwards;  
 }
 
+/*
 @keyframes introAnim {
   0% {font-size: 92px; padding: 50px;}
   40% {font-size: 92px; padding: 50px;}
@@ -53,6 +54,13 @@ p.introText {
   100% {font-size: 28px; padding: 10px; opacity: 1.0;}
 }
 
+@keyframes linkOpAnim {
+  0% {opacity: 0.0; margin-top: 20px;}
+  60% {opacity: 0.0; margin-top: 20px;}
+  100% {opacity: 1.0; margin-top: 0px;}
+}
+*/
+
 .beatmaptext {
   /*background-image: url(images/smallbanner20.gif);*/
   background-position: center; 
@@ -62,7 +70,7 @@ p.introText {
   color: white;
 
   animation-name: introOpAnim;
-  opacity: 0.0;
+ /* opacity: 0.0;*/
   animation-delay: 2s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -81,7 +89,7 @@ p.beatmaptext {
   background-image: linear-gradient(to right, rgba(0,0,0,1) , rgba(0,0,0,1) ,rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1));
 
   animation-name: beatmaps;
-  opacity: 0.0;
+ /* opacity: 0.0;*/
   animation-delay: 2s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -98,18 +106,12 @@ div.links {
   justify-content: center;
   flex-wrap: wrap;
   
-  opacity: 0.0;
+ /* opacity: 0.0;*/
   animation-name: linkOpAnim;
   animation-delay: 1s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   
-}
-
-@keyframes linkOpAnim {
-  0% {opacity: 0.0; margin-top: 20px;}
-  60% {opacity: 0.0; margin-top: 20px;}
-  100% {opacity: 1.0; margin-top: 0px;}
 }
 
 a.links {
@@ -207,7 +209,7 @@ div.beatmaps-container {
   margin-left: 50px;
   margin-right: 50px;
 
-  opacity: 0.0;
+ /* opacity: 0.0;*/
   animation-name: linkOpAnim;
   animation-delay: 3s;
   animation-duration: 2s;
@@ -239,7 +241,6 @@ div.beatmaps.title {
 a.beatmaps.title:link, a.beatmaps.title:visited {
   color: rgb(0, 207, 138);
   text-decoration: none;
-
 }
 
 a.beatmaps.title:hover, a.beatmaps.title:active {
@@ -247,8 +248,36 @@ a.beatmaps.title:hover, a.beatmaps.title:active {
   text-decoration: underline;
 }
 
-
+p.beatmaps.title {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #FFF;
+  font-size: 12px;
+}
 
 div.beatmaps.buttons {
-  flex: 3;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
+  word-wrap: break-word;
+}
+
+a.beatmaps.buttons {
+  width: 30px;
+  padding: 5px;
+  display: block;
+}
+
+button.beatmaps.buttons {
+  width: 30px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.116);
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+img.beatmaps.buttons {
 }
