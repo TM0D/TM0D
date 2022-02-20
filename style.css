@@ -275,7 +275,7 @@ p.beatmaps.title {
 div.beatmaps.buttons {
   padding-top: 0px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 0px;
   margin-left: 10px;
   margin-right: 0px;
   word-wrap: break-word;
