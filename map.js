@@ -33,6 +33,7 @@ function creatBeatmap(bsapi) {
 
    let votebar = document.createElement("div");
    let votebarPercent = document.createElement("div");
+   let votebarPercentText = document.createElement("p");
     votebar.style.backgroundColor = "#D33";
     votebarPercent.style.backgroundColor = "#393";
 
@@ -40,13 +41,22 @@ function creatBeatmap(bsapi) {
     votebarPercent.style.width = wowicantbeliveihavetodothis;
     votebarPercent.style.height = "16px";
 
-    votebarPercent.style.fontSize = "14px"; votebar.style.color = "#fff"; votebar.style.textAlign = "center";
-    votebarPercent.innerHTML = bsapi.stats.upvotes + " / " + bsapi.stats.downvotes;
+    votebarPercentText.innerHTML = bsapi.stats.upvotes + " / " + bsapi.stats.downvotes;
+
+    votebar.classList.add("beatmaps");
+    votebar.classList.add("votebar");
+
+    votebarPercentText.classList.add("beatmaps");
+    votebarPercentText.classList.add("votebar");
+
+    votebarPercentText.classList.add("beatmaps");
+    votebarPercentText.classList.add("votebar");
 
     currMapDiv.appendChild(imageDiv);
     imageDiv.appendChild(coverImg);
     imageDiv.appendChild(votebar);
     votebar.appendChild(votebarPercent);
+    votebarPercent.appendChild(votebarPercentText);
 
 // title    
    let titleDiv = document.createElement("div");
@@ -78,9 +88,12 @@ function creatBeatmap(bsapi) {
 
     let oneclickButton = creatButton("beatsaver://"+bsapi.id, "images/beatmapIcons/downloadcloud.png", "OneClick", 17, 17);
 
+    let playButton = creatButton("https://skystudioapps.com/bs-viewer/?id="+bsapi.id, "images/beatmapIcons/play.png", "OneClick", 12, 16);
+
     currMapDiv.appendChild(buttonDiv);
     buttonDiv.appendChild(downloadButton);
     buttonDiv.appendChild(oneclickButton);
+    buttonDiv.appendChild(playButton);
 
 
 

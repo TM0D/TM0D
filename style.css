@@ -231,6 +231,22 @@ div.beatmaps.image {
   flex: 1;
 }
 
+div.beatmaps.votebar {
+  margin-top: 2px;
+}
+
+p.beatmaps.votebar {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  line-height: 16px
+}
+
 div.beatmaps.title {
   flex: 2;
   padding-left: 15px;
@@ -251,6 +267,7 @@ a.beatmaps.title:hover, a.beatmaps.title:active {
 p.beatmaps.title {
   margin-top: 2px;
   margin-bottom: 2px;
+  
   color: #FFF;
   font-size: 12px;
 }
@@ -277,7 +294,4 @@ button.beatmaps.buttons {
   border: 1px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-img.beatmaps.buttons {
 }
