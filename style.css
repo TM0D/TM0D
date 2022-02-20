@@ -24,7 +24,7 @@ p.introText {
   padding: 10px;
   font-family: "Verdana";
   text-align: center;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 200;
   color: white;
   opacity: 1.0;
@@ -38,7 +38,7 @@ p.introText {
 @keyframes introAnim {
   0% {font-size: 92px; padding: 50px;}
   40% {font-size: 92px; padding: 50px;}
-  100% {font-size: 28px; padding: 10px;}
+  100% {font-size: 38px; padding: 10px;}
 }
 
 @keyframes introOpAnim {
@@ -47,11 +47,53 @@ p.introText {
   100% {opacity: 1.0;}
 }
 
+@keyframes beatmaps {
+  0% {font-size: 92px; padding: 50px; opacity: 0.0;}
+  40% {font-size: 92px; padding: 50px; opacity: 0.0;}
+  100% {font-size: 28px; padding: 10px; opacity: 1.0;}
+}
+
+.beatmaptext {
+  /*background-image: url(images/smallbanner20.gif);*/
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100%;
+  color: white;
+
+  animation-name: introOpAnim;
+  opacity: 0.0;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+p.beatmaptext {
+  margin-top: 0px; 
+  margin-bottom: 5px; 
+  padding: 10px;
+  font-family: "Verdana";
+  text-align: center;
+  font-size: 28px;
+  font-weight: 200;
+  color: white;
+  opacity: 1.0;
+  background-image: linear-gradient(to right, rgba(0,0,0,1) , rgba(0,0,0,1) ,rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1));
+
+  animation-name: beatmaps;
+  opacity: 0.0;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
 /* keeps anim after finished */
 
 div.links {
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 5px; 
+  margin-top: 0px; 
+  margin-bottom: 10px; 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -164,6 +206,12 @@ div.beatmaps-container {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
+
+  opacity: 0.0;
+  animation-name: linkOpAnim;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 div.beatmap {
