@@ -1,0 +1,109 @@
+a.links {
+    cursor: default;
+}
+
+
+p.links {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+div.links {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button.links {
+    padding: 10px;
+    width: 110px;
+    margin: 5px;
+    align-content: center;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* #region github */
+p.links.gh {
+    margin-top: 1px; /*wasn't playing nice*/
+}
+
+img.links.gh {
+    padding-top: 3px; /*wasn't playing nice*/
+}
+
+button.links.gh {
+    padding-top: 3px;
+    background-color: black;
+    border-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: white;
+}
+
+button.links.gh:hover {
+    background-color: white;
+    color: black;
+}
+
+/* #endregion */
+/* #region twitter */
+button.links.twt {
+    background-color: rgba(29, 161, 242, 0);
+    border-color: rgb(29, 161, 242);
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: rgb(29, 161, 242);
+}
+
+button.links.twt:hover {
+    background-color: rgba(29, 161, 242, 1);
+    color: rgb(20, 23, 26);
+}
+
+/* #endregion */
+/* #region scoresaber */
+button.links.ss {
+    padding-top: 9px;
+    background-color: rgba(255, 222, 26, 0);
+    border-color: rgb(255, 222, 26);
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: rgb(255, 222, 26);
+}
+
+button.links.ss:hover {
+    background-color: rgba(255, 222, 26, 1);
+    color: rgb(20, 23, 26);
+}
+
+/* #endregion */
+/* #region beatsaver */
+button.links.bs {
+    background-color: #000000;
+    border-color: #37373a;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: white;
+}
+
+button.links.bs:hover {
+    background-color: #37373a;
+    color: white;
+}
+
+/* #endregion */
+/* #region twitch */
+button.links.tv {
+    background-color: black;
+    border-color: #6441A5;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: #8d51fd;
+}
+
+button.links.tv:hover {
+    background-color: #6441A5;
+    color: white;
+}
+/*#endregion*/
