@@ -1,5 +1,5 @@
 let beatmaps = document.getElementById("beatmaps");
-let SaeraBeatmaps = ["215f1", "19551", "138d0"];
+let SaeraBeatmaps = ["215f1", "19551", "138d0", "293d4"];
 
 SaeraBeatmaps.forEach(bsMapKey => {
     console.log(bsMapKey);
