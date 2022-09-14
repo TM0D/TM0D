@@ -37,6 +37,14 @@ p.introText {
     animation-fill-mode: forwards;
 }
 
+.refBar {
+    opacity: 0.0;
+    animation-name: opacityfade;
+    animation-delay: 0.7s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 div.bio.block {
     opacity: 0.0;
     animation-name: linkOpAnim;
