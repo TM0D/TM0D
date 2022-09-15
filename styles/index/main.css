@@ -2,6 +2,7 @@ body {
     background-color: black;
     padding: 0px;
     margin: 0px;
+    font-family: "Lato", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* #region title text */
@@ -47,15 +48,15 @@ p.refBar {
 
 a.refBar:link,
 a.refBar:visited {
-    color: rgb(0, 207, 138);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 a.refBar:hover,
-a.refBar:active {
-    color: rgb(0, 159, 118);
+a.refBar:active,
+a.refBar.active {
+    color: rgb(6, 224, 231);
     text-decoration: none;
-    background-color: #333;
 }
 
 div.line {
