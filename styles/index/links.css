@@ -79,6 +79,19 @@ button.links.ss:hover {
     color: rgb(20, 23, 26);
 }
 
+button.links.bl {
+    padding-top: 9px;
+    background-color: rgba(255, 222, 26, 0);
+    border-color: rgb(144, 26, 255);
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    color: rgb(137, 102, 233);
+}
+
+button.links.bl:hover {
+    background-color: rgb(144, 26, 255);
+    color: rgb(255, 255, 255);
+}
+
 /* #endregion */
 /* #region beatsaver */
 button.links.bs {
