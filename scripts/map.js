@@ -37,7 +37,7 @@ function creatBeatmap(bsapi) {
     votebar.style.backgroundColor = "#D33";
     votebarPercent.style.backgroundColor = "#393";
 
-    let wowicantbeliveihavetodothis = bsapi.stats.score*100+ "%";
+    let wowicantbeliveihavetodothis = (bsapi.stats.upvotes / (bsapi.stats.upvotes + bsapi.stats.downvotes))* 100 + "%";
     votebarPercent.style.width = wowicantbeliveihavetodothis;
     votebarPercent.style.height = "16px";
 
