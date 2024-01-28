@@ -88,7 +88,7 @@ function creatBeatmap(bsapi) {
 
     let oneclickButton = creatButton("beatsaver://"+bsapi.id, "images/beatmapIcons/downloadCloud.png", "OneClick", 17, 17);
 
-    let playButton = creatButton("https://skystudioapps.com/bs-viewer/?id="+bsapi.id, "images/beatmapIcons/play.png", "Preview", 12, 16);
+    let playButton = creatButton("https://allpoland.github.io/ArcViewer/?id="+bsapi.id, "images/beatmapIcons/play.png", "Preview", 12, 16);
 
     currMapDiv.appendChild(buttonDiv);
     buttonDiv.appendChild(downloadButton);
