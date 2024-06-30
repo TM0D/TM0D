@@ -183,9 +183,10 @@ div.beatmaps-container {
 }
 
 div.beatmap {
-    background-color: rgb(41, 41, 41);
-    border-radius: 10px;
-    width: 350px;
+    background-color: rgb(0, 0, 0);
+    /*border-radius: 10px;*/
+    width: 500px;
+    min-width: 300px;
     display: flex;
     padding: 10px;
     margin-top: 0px;
@@ -193,7 +194,7 @@ div.beatmap {
     margin-right: 15px;
     margin-bottom: 25px;
 }
-
+/*
 img.beatmaps.cover {
     border-radius: 3%;
 }
@@ -268,5 +269,5 @@ button.beatmaps.buttons {
     border: 1px;
     border-radius: 5px;
     cursor: pointer;
-}
+}*/
 /* #endregion beatmaps */

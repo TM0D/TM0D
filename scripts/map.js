@@ -1,18 +1,44 @@
 let beatmaps = document.getElementById("beatmaps");
 let SaeraBeatmaps = ["215f1", "19551", "138d0", "293d4", "2a1e0", "2edda"];
 
+
+
+setTimeout(() => {
 SaeraBeatmaps.forEach(bsMapKey => {
     console.log(bsMapKey);
-    fetch("https://api.beatsaver.com/maps/id/"+bsMapKey).then(response => {
+    /*fetch("https://api.beatsaver.com/maps/id/"+bsMapKey).then(response => {
         console.log(response.status);
         if (response.status === 200) {
             response.json().then(data => {
                 creatBeatmap(data);
         });
     }
-    });
-});
+    });*/
+    let currMapDiv = document.createElement("div");
+    currMapDiv.classList.add("beatmaps");
+    currMapDiv.classList.add("beatmap");
+    let iframe = document.createElement("iframe");
+    iframe.src = "https://beatsaver.com/maps/"+bsMapKey+"/embed";
+    iframe.width = "600";
+    iframe.height = "145";
+    iframe.style.border = "none";
+    iframe.style.borderRadius = "4px";
+    currMapDiv.appendChild(iframe);
 
+    let test = document.getElementById("beatmaps-container");
+    if (test === null) {
+        console.error("test is null");
+    }
+    let placeholder = document.getElementById("TEMP_PLACEHOLDER");
+    test.insertBefore(currMapDiv, placeholder);
+
+
+    //<iframe src="https://beatsaver.com/maps/3afc6/embed" width="600" height="145" style="border: none; border-radius: 4px;"></iframe>
+});
+}, 100);
+
+
+/*
 function creatBeatmap(bsapi) {
     // setup div
    let currMapDiv = document.createElement("div");
@@ -134,3 +160,4 @@ function creatButton(url, image, alt = "", width = "16", height = "16") {
 
     return buttonA;
 }
+*/
