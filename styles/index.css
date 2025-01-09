@@ -1,0 +1,61 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+.header {
+    background-image: url("https://mappingawards.saeraphinx.dev/cdn/Forest.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
+p.introText, p.refBar, p.links-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-family: "Verdana";
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+p.introText {
+    font-size: 38px;
+    font-weight: 100;
+}
+
+p.refBar {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+div.refBar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+a.refBar:link,
+a.refBar:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a.refBar:hover,
+a.refBar:active,
+a.refBar.active {
+    color: rgb(6, 224, 231);
+    text-decoration: none;
+}
+
+div.line {
+    height: 2px;
+    background-image: linear-gradient(to left, violet, rgb(137, 18, 223), rgb(0, 162, 255), green, yellow, orange, red);
+}
