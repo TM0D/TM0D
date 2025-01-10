@@ -18,67 +18,66 @@
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="header">
-        <div class="introText">
-            <span>
-                <p class="introText" id="introText"></p>
-                <!--<script src="scripts/intro.js"></script>!-->
-            </span>
-        </div>
-        <div class="refBar" id="refBar">
-            <p class="refBar">
-                <a class="refBar active" href="">HOME</a> -
-                <a class="refBar" href="bots">BOTS</a>
-            </p>
-            <div class="line"></div>
+        <div class="headerContent" id="headerContent">
+            <div class="introText">
+                <span>
+                    <p class="introText" id="introText">[SAERAPHINX]</p>
+                    <!--<script src="scripts/intro.js"></script>!-->
+                </span>
+            </div>
+            <div class="refBar" id="refBar">
+                <p class="refBar">
+                    <a class="refBar active" href="">HOME</a>
+                    <a class="refBar" href="maps">BOTS</a>
+                </p>
+                <div class="line"></div>
+            </div>
         </div>
     </div>
-    <script>
-        var introText = document.getElementById("introText");
-        let text = "SAERAPHINX";
-        let elements = [];
+    <div class="content" id="content">
+        <div class="background">
+            <img src="old\images\smallbanner20.gif" alt="BG Gif">
+        </div>
+        <div class="contentContainer">
+            <div class="contentText">
+                <h1>Hi, I'm Saera.</h1>
+                <p>I write software, edit videos, and more. I usually can be found working on various projects related to Beat Saber, a VR rhythm game.<br><br>
+                I am currently the lead editor for <a href="https://www.youtube.com/c/CubeCommunity">Cube Community</a>, where we upload videos of top plays, community highlights, and more. I manage the <a href="https://www.youtube.com/playlist?list=PLwx5EB8PdMNeuygkTEeowY-bXj5F-2SCU">Noodle Map Monday</a> series, where we showcase the fun and cool stuff the community has put together with Heck's suite of mods. If you want to play the maps yourself, you can find the link to each map in the video description, or you can find <a href="https://beatsaver.com/playlists/4197">a playlist with every map on BeatSaver</a>. This playlist is usually updated within a couple hours of a video coming out.
+                <br><br>
+                I've also been involved with managing & developing for projects & events. I developed the voting form & judge's panel for the 2024 BeastSaber Mapping Awards, hosted some matches for the 2024 Beat Saber World Cup, and developed a backend that is in use by the BSMG for hosting Beat Saber mods.
+                </p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <h2>BadBeatMods</h2>
+                <p>A game-agnostic mod hosting platform in use by the Beat Saber Modding Group.</p>
+            </div>
+            <div class="project">
+                <h2>Grazzy's Map Downloads</h2>
+                <p>A webpage & file host for Grazzy's Minecraft world downloads.</p>
+            </div>
+            <div class="project">
+                <h2>Trombone Champ: Unflattened</h2>
+                <p>Playtester and complainer for a game where one must toot to succeed.</p>
+            </div>
+            <div class="project">
+                <h2>Beasties 2024</h2>
+                <p>Developer of the Beasties 2024 website.</p>
+            </div>
+        </div>
+    </div>
 
-        let beginningElement = document.createElement(`f`);
-        beginningElement.innerText = `[`;
-
-        for (let i = 0; i < text.length; i++) {
-            let p = document.createElement(`f`);
-            p.innerText = text[i];
-            p.animate([
-                { opacity: 0 },
-                { opacity: 1 }
-            ], {
-                duration: 550,
-                easing: `ease-in-out`,
-                delay: i * 200,
-                fill: `both`
-            });
-            p.style.opacity = 0;
-            elements.push(p);
-        }
-
-        let endElement = document.createElement(`f`);
-        endElement.innerText = `]`;
-
-        introText.appendChild(beginningElement);
-        introText.append(...elements);
-        introText.appendChild(endElement);
-
-        let navbar = document.getElementById("refBar");
-        navbar.animate([
-            { backgroundColor: `rgba(0, 0, 0, 1)` },
-            { backgroundColor: `rgba(0, 0, 0, 0)` }
-        ], {
-            duration: 550,
-            easing: `ease-in-out`,
-            delay: 2000,
-            fill: `both`
-        });
-
-    </script>
+    <script src="scripts/intro.js"></script>
+    <script src="scripts/canvas.js"></script> 
 </body>
 
 </html>

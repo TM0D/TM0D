@@ -1,48 +1,131 @@
-let header = document.querySelector('#introText');
-let anim = [
-    { t: "[]", ms: 200 },
-    { t: "[R]", ms: 75 },
-    { t: "[RJ]", ms: 75 },
-    { t: "[RJP]", ms: 75 },
-    { t: "[RJUP]", ms: 75 },
-    { t: "[LK2D]", ms: 75 },
-    { t: "[SP0N]", ms: 75 },
-    { t: "[RG3G]", ms: 75 },
-    { t: "[S4G3]", ms: 75 },
-    { t: "[RJUP]", ms: 75 },
-    { t: "[LK2D]", ms: 75 },
-    { t: "[SP0N]", ms: 75 },
-    { t: "[RG3G]", ms: 75 },
-    { t: "[S4G3]", ms: 75 },
-    { t: "[GDOD]", ms: 75 },
-    { t: "[TKLD]", ms: 75 },
-    { t: "[LEID]", ms: 75 },
-    { t: "[RMGD]", ms: 75 },
-    { t: "[FMCD]", ms: 75 },
-    { t: "[LMSD]", ms: 75 },
-    { t: "[OMTD]", ms: 75 },
-    { t: "[WM3D]", ms: 75 },
-    { t: "[JMLD]", ms: 75 },
-    { t: "[EM0D]", ms: 75 },
-    { t: "[JM0D]", ms: 75 },
-    { t: "[SM0D]", ms: 75 },
-    { t: "[GM0D]", ms: 75 },
-    { t: "[TM0D]", ms: 75 }
-];
-let stepDenominator = 1;
-if (window.localStorage.stepDenominator)
-    stepDenominator = window.localStorage.stepDenominator;
-let i = 0;
-let update = () => {
-    let step = anim[i];
-    header.innerText = step.t;
-    i++;
 
-    if (i < anim.length)
-        setTimeout(update, step.ms / stepDenominator);
-    else {
-    }
+let lastRunTime = localStorage.getItem("lastRunTime");
+let currentTime = new Date().getTime();
+let timeSinceLastRun = currentTime - lastRunTime;
+if (timeSinceLastRun > 60 * 1000) {
+    window.scroll(0, 0);
+    runIntro();
 }
-update();
+localStorage.setItem("lastRunTime", currentTime);
 
-// Thanks otto
+function runIntro() {
+    var introText = document.getElementById("introText");
+    introText.innerText = ``;
+    let text = "SAERAPHINX";
+    let elements = [];
+
+    let beginningElement = document.createElement(`f`);
+    beginningElement.innerText = `[`;
+
+    for (let i = 0; i < text.length; i++) {
+        let p = document.createElement(`f`);
+        p.innerText = text[i];
+        p.animate([
+            { opacity: 0 },
+            { opacity: 1 }
+        ], {
+            duration: 250,
+            easing: `ease-in-out`,
+            delay: i * 100 + 1500,
+            fill: `both`
+        });
+        p.style.opacity = 0;
+        elements.push(p);
+    }
+
+    let endElement = document.createElement(`f`);
+    endElement.innerText = `]`;
+
+    let blinkKeyframes = [
+        { opacity: 0 },
+        { opacity: 1 },
+        { opacity: 1 },
+        { opacity: 0 },
+        { opacity: 0 },
+        { opacity: 1 },
+        { opacity: 1 },
+        { opacity: 0 },
+        { opacity: 0 },
+        { opacity: 0 },
+        { opacity: 1 },
+        { opacity: 1 },
+    ];
+    let blinkOptions = {
+        duration: 1800,
+        easing: `ease`,
+        delay: 0,
+        iterations: 1
+    }
+    beginningElement.animate(blinkKeyframes, blinkOptions);
+    endElement.animate(blinkKeyframes, blinkOptions);
+    /*beginningElement.animate([
+        {  },
+        { color: `#FFFFFF00` }
+    ], {
+        duration: 1000,
+        easing: `ease-in-out`,
+        delay: 2800,
+        fill: `both`
+    });
+    endElement.animate([
+        {  },
+        { color: `#FFFFFF00` }
+    ], {
+        duration: 1000,
+        easing: `ease-in-out`,
+        delay: 2800,
+        fill: `both`
+    });*/
+    introText.animate([
+        { fontSize: `64px`, paddingTop: `50px` },
+        {}
+    ], {
+        duration: 1000,
+        easing: `ease-in-out`,
+        delay: 2800,
+        fill: `both`
+    });
+
+
+    introText.appendChild(beginningElement);
+    introText.append(...elements);
+    introText.appendChild(endElement);
+
+    let refBar = document.getElementById("refBar");
+    let fadeKeyframes = [
+        { backgroundColor: `#000` },
+        { backgroundColor: `initial` }
+    ];
+    let fadeOptions = {
+        duration: 1000,
+        easing: `ease-in-out`,
+        delay: 2800,
+        fill: `both`
+    }
+    introText.animate(fadeKeyframes, fadeOptions);
+    refBar.animate(fadeKeyframes, fadeOptions);
+    refBar.style.backgroundColor = `rgba(0, 0, 0, 1)`;
+
+    for (let child of refBar.children) {
+        child.animate([
+            { opacity: 0 },
+            { opacity: 1 }
+        ], {
+            duration: 2000,
+            easing: `ease-in-out`,
+            delay: 2500,
+            fill: `both`
+        });
+    }
+
+    let mainContent = document.getElementById("content");
+    mainContent.animate([
+        { opacity: 0 },
+        { opacity: 1 }
+    ], {
+        duration: 2000,
+        easing: `ease-in-out`,
+        delay: 2500,
+        fill: `both`
+    });
+}
