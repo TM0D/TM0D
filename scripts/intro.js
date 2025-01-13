@@ -1,8 +1,8 @@
-
+let isDebug = false;
 let lastRunTime = localStorage.getItem("lastRunTime");
 let currentTime = new Date().getTime();
 let timeSinceLastRun = currentTime - lastRunTime;
-if (timeSinceLastRun > 60 * 1000) {
+if (timeSinceLastRun > 5 * 60 * 1000 || isDebug) {
     window.scroll(0, 0);
     runIntro();
 }
@@ -77,10 +77,10 @@ function runIntro() {
         fill: `both`
     });*/
     introText.animate([
-        { fontSize: `64px`, paddingTop: `50px` },
+        { fontSize: `64px`, paddingTop: `30vh` },
         {}
     ], {
-        duration: 1000,
+        duration: 750,
         easing: `ease-in-out`,
         delay: 2800,
         fill: `both`
@@ -99,7 +99,7 @@ function runIntro() {
     let fadeOptions = {
         duration: 1000,
         easing: `ease-in-out`,
-        delay: 2800,
+        delay: 3000,
         fill: `both`
     }
     introText.animate(fadeKeyframes, fadeOptions);
@@ -113,7 +113,7 @@ function runIntro() {
         ], {
             duration: 2000,
             easing: `ease-in-out`,
-            delay: 2500,
+            delay: 2800,
             fill: `both`
         });
     }
@@ -125,7 +125,7 @@ function runIntro() {
     ], {
         duration: 2000,
         easing: `ease-in-out`,
-        delay: 2500,
+        delay: 2800,
         fill: `both`
     });
 }

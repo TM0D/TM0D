@@ -90,12 +90,13 @@ div.line {
 /* #region Background */
 div.background {
     display: block;
-    width: 100vw;
-    height: 100vh;
+    width: 130vw;
+    height: 130vh;
     position: fixed;
     z-index: -1;
     filter: blur(12px);
     opacity: 1;
+    top: -50px;
 }
 
 div.background img {
@@ -137,12 +138,28 @@ div.contentText a:visited {
 div.contentText a:hover,
 div.contentText a:active,
 div.contentText a.active {
-    background-color: rgba(0, 0, 0, 0.8);
     color: rgb(65, 142, 209);
     text-decoration: underline;
 }
 /* #endregion */
 /* #region Projects */
+div.projectsHeader {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.projectsHeader h1 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+} 
+
 div.projects {
     display: flex;
     flex-direction: row;
@@ -159,5 +176,68 @@ div.project {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
     width: 350px;
+}
+
+p.projectTitle {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p.projectDescription {
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    height: 40px;
+}
+
+div.projectLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div.projectLinks a {
+    display: flex;
+    height: 30px;
+    background-color: #000000a0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 10px;
+    line-height: 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+div.projectLinks a:hover,
+div.projectLinks a:active,
+div.projectLinks a.active {
+    background-color: rgba(59, 59, 59, 0.8);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.projectLinks a img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+div.projectLinks a p {
+    display: block;
+    margin: 0;
+    padding-right: 8px;
+    opacity: 1;
+    overflow: visible;
+    right: 0;
+    transition: 0.5s;
+    font-size: 1em;
 }
 /* #endregion */
