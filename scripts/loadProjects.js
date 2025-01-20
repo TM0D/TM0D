@@ -11,7 +11,7 @@ loadProjects(metaTagVal);
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
 
-    projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtested & Live Streams for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
+    projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtested & Live Streams for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`, `images/tbs.png`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
 
     projectsDiv.appendChild(addProject(`BadBeatMods`, `A game-agnostic mod hosting platform in use by the Beat Saber Modding Group.`, [websiteUrl(`https://beatmods.com`), githubUrl(`https://github.com/Saeraphinx/BadBeatMods`)]));
 
