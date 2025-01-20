@@ -16,12 +16,12 @@ function loadProjects(isAllProjectsPage) {
     projectsDiv.appendChild(addProject(`BadBeatMods`, `A game-agnostic mod hosting platform in use by the Beat Saber Modding Group.`, [websiteUrl(`https://beatmods.com`), githubUrl(`https://github.com/Saeraphinx/BadBeatMods`)]));
 
     if (isAllProjectsPage) {
-        projectsDiv.appendChild(addProject(`Saeraphinx.dev`, `This website!`, [websiteUrl(`https://saeraphinx.dev`), githubUrl(`https://github.com/Saeraphinx/saeraphinx.dev`)]));
+        projectsDiv.appendChild(addProject(`Saeraphinx.dev`, `This website!`, [websiteUrl(`https://saeraphinx.dev`, `Website`, `images/favicon.ico`), githubUrl(`https://github.com/Saeraphinx/saeraphinx.dev`)]));
     }
 
     projectsDiv.appendChild(addProject(`Grazzy's Map Downloads`, `A webpage & file host for Grazzy's Minecraft world downloads.`, [websiteUrl(`https://grazzy.sae.sh`)]));
 
-    projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`)]));
+    projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));
 
     projectsDiv.appendChild(addProject(`Beat Saber World Cup 2024`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2024`, `Tournament Page`, `images/cc.png`)]));
 
@@ -67,6 +67,9 @@ function addProject(name, description, links = []) {
         let linkImg = document.createElement(`img`);
         linkImg.src = link.image;
         linkImg.alt = link.text;
+        if (link.image && link.image.includes(`beasties`)) {
+            linkImg.style.borderRadius = `10%`;
+        }
         linkA.appendChild(linkImg);
         let linkP = document.createElement(`p`);
         linkP.innerText = link.text;
