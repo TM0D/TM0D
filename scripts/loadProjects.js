@@ -10,6 +10,9 @@ loadProjects(metaTagVal);
 
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
+
+    projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtested & Live Streams for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
+
     projectsDiv.appendChild(addProject(`BadBeatMods`, `A game-agnostic mod hosting platform in use by the Beat Saber Modding Group.`, [websiteUrl(`https://beatmods.com`), githubUrl(`https://github.com/Saeraphinx/BadBeatMods`)]));
 
     if (isAllProjectsPage) {
@@ -18,7 +21,7 @@ function loadProjects(isAllProjectsPage) {
 
     projectsDiv.appendChild(addProject(`Grazzy's Map Downloads`, `A webpage & file host for Grazzy's Minecraft world downloads.`, [websiteUrl(`https://grazzy.sae.sh`)]));
 
-    projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://beasties.saeraphinx.dev`)]));
+    projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`)]));
 
     projectsDiv.appendChild(addProject(`Beat Saber World Cup 2024`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2024`, `Tournament Page`, `images/cc.png`)]));
 
@@ -26,9 +29,9 @@ function loadProjects(isAllProjectsPage) {
 
     projectsDiv.appendChild(addProject(`Cube Community 2023 Rewind`, `One of the many editors behind the 2023 Cube Community Rewind video.`, [youtubeUrl(`https://www.youtube.com/watch?v=bbwJkCF4xp0`)]));
 
-    projectsDiv.appendChild(addProject(`Extra Sensory II Teaser Trailer`, `Thumbnail artist for the Extra Sensory II teaser trailer.`, [youtubeUrl(`https://www.youtube.com/watch?v=gDIOShFXePo`)]));
-
     if (isAllProjectsPage) {
+        projectsDiv.appendChild(addProject(`Extra Sensory II Teaser Trailer`, `Thumbnail artist for the Extra Sensory II teaser trailer.`, [youtubeUrl(`https://www.youtube.com/watch?v=gDIOShFXePo`)]));
+
         projectsDiv.appendChild(addProject(`Ranking Overseer`, `Discord Bot made to manage the ranking queue for BeatLeader.`));
 
         projectsDiv.appendChild(addProject(`Luma`, `A private bot made originally as a replacement for MEE6, but now does much more.`));

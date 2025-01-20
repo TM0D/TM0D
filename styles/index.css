@@ -22,7 +22,7 @@ div.flex-column {
 
 /* #region Header */
 .header {
-    background-image: url("https://mappingawards.saeraphinx.dev/cdn/Forest.png");
+    background-image: url("/images/bannerbg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,13 +133,30 @@ div.contentText a:link,
 div.contentText a:visited {
     color: rgb(128, 195, 255);
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 div.contentText a:hover,
 div.contentText a:active,
 div.contentText a.active {
     color: rgb(65, 142, 209);
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+div.contentText a.hid,
+div.contentText a.hid:link,
+div.contentText a.hid:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.contentText a.hid:hover,
+div.contentText a.hid:active,
+div.contentText a.hid.active {
+    color: rgb(65, 142, 209);
+    text-decoration: none;
+    cursor: pointer;
 }
 /* #endregion */
 /* #region Projects */
