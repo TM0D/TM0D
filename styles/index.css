@@ -1,0 +1,331 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background-color: #000000;
+    color: white;
+}
+
+div.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #region Header */
+.header {
+    background-image: url("/images/bannerbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
+div.headerContent {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+p.introText, p.refBar, p.links-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+p.introText {
+    font-size: 38px;
+    font-weight: 200;
+    padding-top: 10px;
+    text-shadow: #000000 0 0 8px;
+}
+
+p.refBar {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+div.header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: -55px;
+    z-index: 100;
+}
+
+a.refBar,
+a.refBar:link,
+a.refBar:visited {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 0 5px 0 5px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a.refBar:hover,
+a.refBar:active,
+a.refBar.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(6, 224, 231);
+    text-decoration: none;
+}
+
+div.line {
+    height: 2px;
+    background-image: linear-gradient(to left, violet, rgb(137, 18, 223), rgb(0, 162, 255), green, yellow, orange, red);
+}
+/* #endregion */
+/* #region Background */
+div.background {
+    display: block;
+    width: 130vw;
+    height: 130vh;
+    position: fixed;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 1;
+    top: -50px;
+}
+
+div.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+/* #endregion */
+/* #region Content */
+div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.contentContainer {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.contentText {
+    text-align: center;
+}
+
+div.contentText a,
+div.contentText a:link,
+div.contentText a:visited {
+    color: rgb(128, 195, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.contentText a:hover,
+div.contentText a:active,
+div.contentText a.active {
+    color: rgb(65, 142, 209);
+    text-decoration: none;
+}
+
+div.contentText a.hid,
+div.contentText a.hid:link,
+div.contentText a.hid:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.contentText a.hid:hover,
+div.contentText a.hid:active,
+div.contentText a.hid.active {
+    color: rgb(65, 142, 209);
+    text-decoration: none;
+    cursor: pointer;
+}
+/* #endregion */
+/* #region Links */
+div.linksContainer {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.linksContainer h1 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+} 
+
+div.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+}
+
+div.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.linksHoverGrad {
+    /*background-image: linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0));*/
+    background-color: #00000033;
+    opacity: 0;
+    border-color: transparent;
+    transition: all 0.3s;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+div.links a
+div.links a:hover,
+div.links a:active,
+div.links a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+div.links a p {
+    display: block;
+    margin: 10px 0 10px 0;
+    font-size: 1em;
+    color: white;
+}
+/* #endregion */
+/* #region Projects */
+div.projectsHeader {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.projectsHeader h1 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+} 
+
+div.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+}
+
+div.project {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 350px;
+}
+
+p.projectTitle {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p.projectDescription {
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    height: 40px;
+}
+
+div.projectLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div.projectLinks a {
+    display: flex;
+    height: 30px;
+    background-color: #000000a0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 10px;
+    line-height: 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+div.projectLinks a:hover,
+div.projectLinks a:active,
+div.projectLinks a.active {
+    background-color: rgba(59, 59, 59, 0.8);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+div.projectLinks a img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+div.projectLinks a p {
+    display: block;
+    margin: 0;
+    padding-right: 8px;
+    opacity: 1;
+    overflow: visible;
+    right: 0;
+    transition: 0.5s;
+    font-size: 1em;
+}
+/* #endregion */
